@@ -3,47 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Study-Sphere
-    </title>
-    <link rel="stylesheet" href="/frontend/css/index.css">
+    <title>Study-Sphere</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+    <!-- Header Section -->
+    <header class="d-flex justify-content-between align-items-center p-3">
+        <div>
+            <img src="/img/Me.jpg" alt="Study-Sphere Logo" class="logo">
+        </div>
+        <div>
+            <a href="/html/login.html" class="btn btn-primary mr-2">Login</a>
+            <a href="/html/register.html" class="btn btn-success">Register</a>
+        </div>
     </header>
-    <main>
-        <section class="hero">
-            <h1>Welcome to Study-Sphere</h1>
-            <p>Access a vast library of study materials, including videos, diagrams, eBooks, and PDFs, all in one place.</p>
-            <button class="btn signup" ><a href="/frontend/html/signup.html"></a></button>
-            <button class="btn login" ><a href="/frontend/html/login.html">Login</a></button>
+
+    <!-- Main Content Section -->
+    <main class="container text-center my-5">
+        <h1>Welcome to Study-Sphere</h1>
+        <p>Your one-stop platform for all your educational needs. Explore courses, track your progress, and achieve your learning goals with us.</p>
+        <img src="hero-image.jpg" alt="Study-Sphere Hero" class="img-fluid mb-4">
+
+        <!-- Informative Section -->
+        <section class="my-5">
+            <h2>About Study-Sphere</h2>
+            <p>Study-Sphere is a comprehensive online learning platform designed to help you find the best courses, track your learning progress, and achieve your educational goals. Whether you're looking to learn a new skill, improve your knowledge, or advance your career, Study-Sphere has something for everyone.</p>
+            <p>Our platform offers a wide range of courses across various subjects, including technology, business, arts, and more. With Study-Sphere, you can access high-quality educational content, track your progress, and stay motivated with our interactive learning tools.</p>
         </section>
-        <section class="features">
-            <h2>What We Offer</h2>
-            <ul>
-                <li><i class="fas fa-video"></i> Video Lectures</li>
-                <li><i class="fas fa-diagram"></i> Interactive Diagrams</li>
-                <li><i class="fas fa-book"></i> eBooks and PDFs</li>
-                <li><i class="fas fa-community"></i> Community Forum</li>
-            </ul>
+
+        <!-- Features Section -->
+        <section class="my-5">
+            <h2>Key Features</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-card p-3 mb-4">
+                        <h5>Extensive Course Library</h5>
+                        <p>Access a wide range of courses across different subjects and levels.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card p-3 mb-4">
+                        <h5>Personalized Recommendations</h5>
+                        <p>Get course suggestions based on your interests and learning history.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card p-3 mb-4">
+                        <h5>Progress Tracking</h5>
+                        <p>Monitor your learning progress and stay on track with your goals.</p>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section class="testimonials">
-            <h2>What Our Users Say</h2>
-            <blockquote>
-                <p>StudyMate has been a game-changer for my studies. I can access all the materials I need in one place.</p>
-                <cite>John Doe</cite>
-            </blockquote>
-            <blockquote>
-                <p>The community forum is so helpful. I can ask questions and get answers from other students and experts.</p>
-                <cite>Jane Smith</cite>
-            </blockquote>
+
+        <!-- Developer Info Cards -->
+        <section class="my-5">
+            <h2>Meet the Developers</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card developer-card">
+                        <img src="/img/Me.jpg" class="card-img-top" alt="Developer 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Bobby Dsouza</h5>
+                            <p class="card-text">Full Stack Developer</p>
+                            <a href="https://www.instagram.com/Anon_x_31" class="btn btn-outline-primary">Instagram</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card developer-card">
+                        <img src="/img/Me.jpg" class="card-img-top" alt="Developer 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Ashar Chougle</h5>
+                            <p class="card-text">Frontend Developer</p>
+                            <a href="https://www.instagram.com/_._ashar_chougle_._" class="btn btn-outline-primary">Instagram</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
-    <script src="/frontend/js/index.js"></script>
+
+    <!-- Footer Section -->
+    <footer class="text-center p-3">
+        <p>&copy; 2024 Study-Sphere. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

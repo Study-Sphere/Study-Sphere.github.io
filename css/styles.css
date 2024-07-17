@@ -1,0 +1,140 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; /* Light gray background */
+    color: #343a40; /* Dark gray text */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Styling */
+header {
+    background-color: #343a40; /* Dark gray background */
+    color: #ffffff; /* White text */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 10px 20px;
+}
+
+header .logo {
+    width: 50px;
+}
+
+header .btn {
+    margin: 0 5px;
+}
+
+header .btn-primary {
+    background-color: #007bff; /* Bootstrap primary color */
+    border: none;
+}
+
+header .btn-success {
+    background-color: #28a745; /* Bootstrap success color */
+    border: none;
+}
+
+/* Main Content Styling */
+main h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #007bff; /* Primary color */
+    text-shadow: 2px 2px #dee2e6; /* Light shadow for text depth */
+}
+
+main p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+main img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Informative Section */
+section {
+    padding: 40px 0;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #dee2e6; /* Light border between sections */
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #343a40; /* Dark gray */
+    text-shadow: 1px 1px #dee2e6; /* Light shadow for text depth */
+}
+
+section p {
+    font-size: 1rem;
+    color: #6c757d; /* Medium gray for paragraph text */
+}
+
+/* Features Section */
+.feature-card {
+    border: 1px solid #dee2e6; /* Light border */
+    border-radius: 5px;
+    background-color: #ffffff; /* White background */
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 20px;
+    text-align: left;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hover shadow for depth */
+}
+
+.feature-card h5 {
+    color: #007bff; /* Primary color */
+}
+
+.feature-card p {
+    color: #6c757d; /* Medium gray for paragraph text */
+}
+
+/* Developer Info Cards */
+.developer-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.developer-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Hover shadow for depth */
+}
+
+.developer-card .card-body {
+    background-color: #f8f9fa; /* Light gray background */
+}
+
+.developer-card .card-title {
+    color: #007bff; /* Primary color */
+}
+
+.developer-card .btn-outline-primary {
+    border-color: #007bff; /* Primary color border */
+    color: #007bff; /* Primary color text */
+}
+
+.developer-card .btn-outline-primary:hover {
+    background-color: #007bff; /* Primary color background on hover */
+    color: #ffffff; /* White text on hover */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #343a40; /* Dark gray background */
+    color: #ffffff; /* White text */
+    padding: 20px 0;
+}
+
+footer a {
+    color: #007bff; /* Primary color */
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #0056b3; /* Darker shade of primary color */
+    text-decoration: underline;
+}

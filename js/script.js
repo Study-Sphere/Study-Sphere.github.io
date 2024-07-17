@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const loginForm = document.getElementById('loginForm');
     const registerForm = document.getElementById('registerForm');
+    const adminLoginForm = document.getElementById('adminLoginForm');
 
     if (loginForm) {
         loginForm.addEventListener('submit', (e) => {
@@ -9,8 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const password = document.getElementById('password').value;
 
             // Implement login logic here (e.g., API call)
-
-            console.log('Logging in:', username);
+            console.log('User logging in:', username);
         });
     }
 
@@ -22,8 +22,18 @@ document.addEventListener('DOMContentLoaded', () => {
             const password = document.getElementById('password').value;
 
             // Implement registration logic here (e.g., API call)
+            console.log('User registering:', username);
+        });
+    }
 
-            console.log('Registering:', username);
+    if (adminLoginForm) {
+        adminLoginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const username = document.getElementById('adminUsername').value;
+            const password = document.getElementById('adminPassword').value;
+
+            // Implement admin login logic here (e.g., API call)
+            console.log('Admin logging in:', username);
         });
     }
 });
