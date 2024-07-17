@@ -1,0 +1,72 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; /* Light gray background */
+    color: #343a40; /* Dark gray text */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container Styling */
+.container {
+    padding: 20px;
+}
+
+/* Card Styling */
+.card {
+    border: 1px solid #dee2e6; /* Light border */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px;
+}
+
+.card-body {
+    padding: 0; /* Remove default padding */
+}
+
+.card-body h3 {
+    margin-top: 0;
+}
+
+/* Profile Picture Styling */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.rounded-circle {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+    border: 4px solid #007bff; /* Primary color */
+    border-radius: 50%;
+}
+
+/* Recent Activities Styling */
+#recentActivities {
+    margin-top: 20px;
+}
+
+.activity-card {
+    background-color: #fff;
+    border: 1px solid #dee2e6; /* Light border */
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.activity-card p {
+    margin-bottom: 5px;
+}
+
+.activity-card a {
+    color: #007bff; /* Primary color */
+    text-decoration: none;
+}
+
+.activity-card a:hover {
+    text-decoration: underline;
+}

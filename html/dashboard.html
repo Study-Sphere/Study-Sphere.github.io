@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - Study-Sphere</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img src="/img/Me.jpg" alt="Profile Picture" class="img-fluid rounded-circle">
+                            </div>
+                            <div class="col-md-9">
+                                <h3>Welcome, <span id="username">Username</span>!</h3>
+                                <p><strong>Name:</strong> <span id="name">Full Name</span></p>
+                                <p><strong>Progress:</strong> Subject Progress Bar</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <h4>Recent Activities</h4>
+                        <div id="recentActivities">
+                            <!-- Activity Cards will be dynamically populated here -->
+                            <div class="activity-card">
+                                <p>Watched Video: <a href="#">Video Title</a></p>
+                                <p>Date: <span class="activity-date">DD/MM/YYYY</span></p>
+                            </div>
+                            <div class="activity-card">
+                                <p>Read Ebook: <a href="#">Ebook Title</a></p>
+                                <p>Date: <span class="activity-date">DD/MM/YYYY</span></p>
+                            </div>
+                            <div class="activity-card">
+                                <p>Viewed PDF: <a href="#">PDF Title</a></p>
+                                <p>Date: <span class="activity-date">DD/MM/YYYY</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Include your JavaScript file for dynamic content handling -->
+    <script src="/js/dashboard.js"></script>
+</body>
+</html>
