@@ -1,11 +1,32 @@
-/* General Styling */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa; /* Light gray background */
-    color: #343a40; /* Dark gray text */
-    margin: 0;
-    padding: 0;
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+* {
     box-sizing: border-box;
+}
+
+body {
+    background-color: #28223F;
+    font-family: Montserrat, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+h3 {
+    margin: 10px 0;
+}
+
+h6 {
+    margin: 5px 0;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 14px;
+    line-height: 21px;
 }
 
 /* Header Styling */
@@ -45,6 +66,7 @@ main h1 {
 main p {
     font-size: 1.2rem;
     margin-bottom: 40px;
+    color: #dee2e6;
 }
 
 main img {
@@ -94,33 +116,85 @@ section p {
     color: #6c757d; /* Medium gray for paragraph text */
 }
 
-/* Developer Info Cards */
-.developer-card {
-    transition: transform 0.3s, box-shadow 0.3s;
+
+
+
+
+
+
+
+.card-container {
+    background-color: #231E39;
+    border-radius: 5px;
+    box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+    color: #B3B8CD;
+    padding-top: 30px;
+    position: relative;
+    width: 350px;
+    max-width: 100%;
+    text-align: center;
+    margin: auto;
 }
 
-.developer-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Hover shadow for depth */
+.card-container .pro {
+    color: #231E39;
+    background-color: #FEBB0B;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 3px 7px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
 }
 
-.developer-card .card-body {
-    background-color: #f8f9fa; /* Light gray background */
+.card-container .round {
+    border: 1px solid #03BFCB;
+    border-radius: 50%;
+    padding: 7px;
+    width: 100px;  
+    height: 100px; 
+    object-fit: cover; 
 }
 
-.developer-card .card-title {
-    color: #007bff; /* Primary color */
+
+button.primary.ghost {
+    background-color: transparent;
+    color: #02899C;
 }
 
-.developer-card .btn-outline-primary {
-    border-color: #007bff; /* Primary color border */
-    color: #007bff; /* Primary color text */
+.skills {
+    background-color: #1F1A36;
+    text-align: left;
+    padding: 15px;
+    margin-top: 30px;
 }
 
-.developer-card .btn-outline-primary:hover {
-    background-color: #007bff; /* Primary color background on hover */
-    color: #ffffff; /* White text on hover */
+.skills ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
+
+.skills ul li {
+    border: 1px solid #2D2747;
+    border-radius: 2px;
+    display: inline-block;
+    font-size: 12px;
+    margin: 0 7px 7px 0;
+    padding: 7px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .card-container {
+        width: 100%;
+    }
+}
+
+
+
+
 
 /* Footer Styling */
 footer {

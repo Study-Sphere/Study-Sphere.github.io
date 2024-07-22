@@ -36,4 +36,15 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Admin logging in:', username);
         });
     }
+
+// Show the popup modal
+function showPopup() {
+    $('#popupModal').modal('show');
+}
+
+// Redirect to the specified page
+function redirectTo(page) {
+    window.location.href = page;
+}
+
 });
