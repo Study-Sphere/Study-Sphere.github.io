@@ -2,7 +2,7 @@
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f8f9fa; /* Light gray background */
-    color: #343a40; /* Dark gray text */
+    color: #2D2747; /* Dark color */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -29,14 +29,14 @@ body {
 
 .card-title {
     font-size: 1.5rem;
-    color: #007bff; /* Primary color */
+    color: #FEBB0B; /* Bright yellow */
     text-shadow: 1px 1px #dee2e6; /* Light shadow for text depth */
 }
 
 /* Form Styling */
 .form-group label {
     font-weight: bold;
-    color: #343a40; /* Dark gray */
+    color: #2D2747; /* Dark color */
 }
 
 .form-control {
@@ -46,20 +46,21 @@ body {
 }
 
 .btn-primary {
-    background-color: #007bff; /* Primary color */
+    background-color: #02899C; /* Custom button color */
     border: none;
     border-radius: 5px;
     padding: 10px;
     transition: background-color 0.3s;
+    color: #FFFFFF; /* White text */
 }
 
 .btn-primary:hover {
-    background-color: #0056b3; /* Darker shade of primary color */
+    background-color: #026F79; /* Darker shade of button color */
 }
 
 /* Link Styling */
 .text-center a {
-    color: #007bff; /* Primary color */
+    color: #02899C; /* Custom link color */
     text-decoration: none;
 }
 
@@ -72,4 +73,12 @@ body {
     .card {
         padding: 15px; /* Adjust padding for smaller screens */
     }
+}
+
+/* Logo Styling */
+header .logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Makes the logo round */
+    object-fit: cover; /* Ensures the image fits within the round shape */
 }
