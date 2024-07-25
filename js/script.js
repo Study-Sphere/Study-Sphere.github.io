@@ -1,3 +1,6 @@
+import Amplify from 'aws-amplify';
+import awsconfig from './aws-exports';
+Amplify.configure(awsconfig);
 document.addEventListener('DOMContentLoaded', () => {
     const loginForm = document.getElementById('loginForm');
     const registerForm = document.getElementById('registerForm');
