@@ -1,3 +1,5 @@
+
+
 import { Auth } from 'aws-amplify';
 
 document.getElementById('register-form').addEventListener('submit', async function(event) {
