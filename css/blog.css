@@ -1,51 +1,98 @@
+/* blog.css */
+
 body {
-    font-family: "Lato", sans-serif;
-  }
-  
-  .sidebar {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-  }
-  
-  .sidebar a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-  }
-  
-  .sidebar a:hover {
-    color: #f1f1f1;
-  }
-  
-  .sidebar .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
-  
-  .openbtn {
-    font-size: 20px;
-    cursor: pointer;
-    background-color: #111;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-  }
-  
-  .main-content {
-    transition: margin-left .5s;
-    padding: 16px;
-  }
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.main-content {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+.blog-content {
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Header Styling from styles.css */
+header {
+  background-color: #2D2747; /* Dark color */
+  color: #ffffff; /* White text */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* Makes the logo round */
+  object-fit: cover; /* Ensures the image fits within the round shape */
+}
+
+header .btn {
+  margin: 0 5px;
+}
+
+header .btn-primary {
+  background-color: #007bff; /* Bootstrap primary color */
+  border: none;
+  color: #ffffff; /* White text */
+  padding: 5px;
+}
+
+header .btn-primary a{
+  background-color: #007bff;
+  border: none;
+}
+
+header .btn-success {
+  background-color: #28a745; /* Bootstrap success color */
+  border: none;
+  color: #ffffff; /* White text */
+}
