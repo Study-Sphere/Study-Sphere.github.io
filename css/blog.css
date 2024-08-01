@@ -49,9 +49,3 @@ body {
     transition: margin-left .5s;
     padding: 16px;
   }
-  
-  .blog-content {
-    max-width: 800px;
-    margin: auto;
-  }
-  

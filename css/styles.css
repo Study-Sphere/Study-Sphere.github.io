@@ -1,4 +1,3 @@
-/*styles.css*/
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 /* Global Styles */
@@ -34,7 +33,7 @@ p {
 
 /* Header Styling */
 header {
-    background-color: #535C5C; /* Dark color */
+    background-color: #2D2747; /* Dark color */
     color: #ffffff; /* White text */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     padding: 10px 20px;
