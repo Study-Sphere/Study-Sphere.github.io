@@ -1,5 +1,3 @@
-
-
 import { Auth } from 'aws-amplify';
 
 document.getElementById('register-form').addEventListener('submit', async function(event) {
@@ -14,7 +12,7 @@ document.getElementById('register-form').addEventListener('submit', async functi
         try {
             await signUp(username, password, email);
             alert('Registration successful!');
-            // Redirect or perform further actions
+            window.location.href = 'html\login.html';
         } catch (error) {
             alert('Registration failed. Please try again.');
         }

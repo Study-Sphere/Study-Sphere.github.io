@@ -1,3 +1,5 @@
+import { Auth } from 'aws-amplify';
+
 document.getElementById('login-form').addEventListener('submit', async function(event) {
     event.preventDefault();
 
@@ -8,7 +10,7 @@ document.getElementById('login-form').addEventListener('submit', async function(
         try {
             await signIn(username, password);
             alert('Login successful!');
-            // Redirect or perform further actions
+            window.location.href = 'html\home.html';
         } catch (error) {
             alert('Login failed. Please try again.');
         }

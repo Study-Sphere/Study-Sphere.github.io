@@ -2,25 +2,31 @@ function openNav() {
   document.getElementById("sidebar").style.width = "250px";
   document.getElementById("main-content").style.marginLeft = "250px";
   document.querySelector(".openbtn").style.display = "none";
+  document.getElementById("prev-button").style.marginLeft = "250px";
 }
 
 function closeNav() {
   document.getElementById("sidebar").style.width = "0";
   document.getElementById("main-content").style.marginLeft = "0";
   document.querySelector(".openbtn").style.display = "block";
+  document.querySelector(".closebtn").style.display = "block";
+  document.getElementById("prev-button").style.marginLeft = "0";
 }
 
-document.getElementById('confirmLogoutBtn').addEventListener('click', function() {
-  window.location.href = 'index.html';
-});
-// home.js
-document.addEventListener("DOMContentLoaded", function() {
-  // Assuming you have the username stored in local storage or fetched from an API
-  var userName = localStorage.getItem('userName'); // Or use any method to get the username
-
-  if (userName) {
-      document.getElementById('userName').textContent = userName;
+function checkScreenWidth() {
+  if (window.innerWidth <= 600) {
+    closeNav();
   } else {
-      document.getElementById('userName').textContent = 'Guest';
+    document.getElementById("sidebar").style.width = "250px";
+    document.getElementById("main-content").style.marginLeft = "250px";
+    document.querySelector(".openbtn").style.display = "none";
+    document.querySelector(".closebtn").style.display = "none";
+    document.getElementById("prev-button").style.marginLeft = "250px";
   }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  checkScreenWidth();
 });
+
+window.addEventListener("resize", checkScreenWidth);
