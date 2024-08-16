@@ -71,6 +71,65 @@ main {
     text-align: center;
 }
 
+.text_container {
+    height: 150px; /* Adjust as necessary */
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .text {
+    font-weight: normal;
+    font-size: 28px;
+    color: #000000;
+    line-height: 1.5;
+    position: absolute; /* Prevents affecting surrounding content */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+  }
+  
+  .dud {
+    color: #089908;
+  }
+  
+  /* Responsive Adjustments */
+  
+  /* Small devices (portrait tablets and large phones, 600px and below) */
+  @media (max-width: 600px) {
+    .text {
+      font-size: 22px;
+    }
+  }
+  
+  /* Medium devices (landscape tablets, 768px and below) */
+  @media (max-width: 768px) {
+    .text {
+      font-size: 24px;
+    }
+  }
+  
+  /* Large devices (desktops, 992px and below) */
+  @media (max-width: 992px) {
+    .text {
+      font-size: 26px;
+    }
+  }
+  
+  /* Extra large devices (large desktops, 1200px and below) */
+  @media (max-width: 1200px) {
+    .text {
+      font-size: 28px;
+    }
+  }
+  
+  
+
 main h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
@@ -200,6 +259,7 @@ button.primary.ghost {
         width: 100%;
     }
 }
+
 
 /* Footer Styling */
 footer {

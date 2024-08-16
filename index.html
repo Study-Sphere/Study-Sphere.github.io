@@ -5,8 +5,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Study-Sphere</title>
+    <!-- Favicons -->
+    <link href="/img/logo.PNG" rel="icon">
+    <link href="/img/logo.PNG" rel="apple-touch-icon">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        /* Add custom styles for the hero section */
+        .hero {
+            position: relative;
+            color: white;
+            text-align: center;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-content {
+            display: table;
+            width: 100%;
+        }
+
+        .table-cell {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .text {
+            font-size: 1.5rem;
+        }
+
+        .dud {
+            color: #888;
+        }
+    </style>
 </head>
 
 <body>
@@ -23,18 +61,18 @@
 
     <!-- Main Content Section -->
     <main class="container text-center my-5">
-        <h1>Welcome to Study-Sphere</h1>
-        <p>Your one-stop platform for all your educational needs. Explore courses, track your progress, and achieve your
-            learning goals with us.</p>
-        <img src="/img/courses_img/bg1.jpg" alt="Study-Sphere Hero" class="img-fluid mb-4">
-
+        <div class="text_container">
+            <div class="text">Study-Sphere</div>
+          </div>
         <!-- Informative Section -->
         <section class="my-5">
             <h2>About Study-Sphere</h2>
-            <p>Study-Sphere is a comprehensive online learning platform designed to help you find the best courses, and achieve your educational goals. Whether you're looking to learn a new
+            <p>Study-Sphere is a comprehensive online learning platform designed to help you find the best courses, and
+                achieve your educational goals. Whether you're looking to learn a new
                 skill, improve your knowledge, or advance your career, Study-Sphere has something for everyone.</p>
             <p>Our platform offers a wide range of courses across various subjects, including technology, business,
-                arts, and more. With Study-Sphere, you can access high-quality educational content presented in blog format,
+                arts, and more. With Study-Sphere, you can access high-quality educational content presented in blog
+                format,
                 complete with images and diagrams to enhance your learning experience.</p>
         </section>
 
@@ -42,7 +80,7 @@
         <section class="my-5">
             <h2>Key Features</h2>
             <div class="row">
-<div class="col-md-4">
+                <div class="col-md-4">
                     <div class="feature-card p-3 mb-4">
                         <h5>Course and Blog Management</h5>
                         <p>Explore a variety of courses organized into categories with rich media support.</p>
@@ -64,15 +102,13 @@
             </div>
         </section>
 
-
         <!-- Developer Info Cards -->
         <div class="container mt-5">
             <div class="row">
                 <div class="col-md-6 mb-4">
                     <div class="card-container">
                         <span class="pro">PRO</span>
-                        <img class="round" src="/img/developer/dev1.jpg
-                        " alt="user" />
+                        <img class="round" src="/img/developer/dev1.jpg" alt="user" />
                         <h3>Bobby Dsouza</h3>
                         <h6>India</h6>
                         <p>Full Stack Developer and <br /> Cyber Security</p>
@@ -132,6 +168,93 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script >
+        class TextScramble {
+        constructor(el) {
+          this.el = el
+          this.chars = '!<>-_\\/[]{}—=+*^?#________'
+          this.update = this.update.bind(this)
+        }
+        setText(newText) {
+          const oldText = this.el.innerText
+          const length = Math.max(oldText.length, newText.length)
+          const promise = new Promise((resolve) => this.resolve = resolve)
+          this.queue = []
+          for (let i = 0; i < length; i++) {
+            const from = oldText[i] || ''
+            const to = newText[i] || ''
+            const start = Math.floor(Math.random() * 40)
+            const end = start + Math.floor(Math.random() * 40)
+            this.queue.push({ from, to, start, end })
+          }
+          cancelAnimationFrame(this.frameRequest)
+          this.frame = 0
+          this.update()
+          return promise
+        }
+        update() {
+          let output = ''
+          let complete = 0
+          for (let i = 0, n = this.queue.length; i < n; i++) {
+            let { from, to, start, end, char } = this.queue[i]
+            if (this.frame >= end) {
+              complete++
+              output += to
+            } else if (this.frame >= start) {
+              if (!char || Math.random() < 0.28) {
+                char = this.randomChar()
+                this.queue[i].char = char
+              }
+              output += `<span class="dud">${char}</span>`
+            } else {
+              output += from
+            }
+          }
+          this.el.innerHTML = output
+          if (complete === this.queue.length) {
+            this.resolve()
+          } else {
+            this.frameRequest = requestAnimationFrame(this.update)
+            this.frame++
+          }
+        }
+        randomChar() {
+          return this.chars[Math.floor(Math.random() * this.chars.length)]
+        }
+      }
+      
+      // ——————————————————————————————————————————————————
+      // Example
+      // ——————————————————————————————————————————————————
+      
+      const phrases = [
+        'a lifelong learner,',
+'an innovator,',
+'a coding enthusiast,',
+'an academic explorer,',
+'a knowledge seeker,',
+'a future leader,',
+'a course creator,',
+'a skill builder,',
+'an education advocate,',
+'a learning visionary,'
+
+      ]
+      
+      const el = document.querySelector('.text')
+      const fx = new TextScramble(el)
+      
+      let counter = 0
+      const next = () => {
+        fx.setText(phrases[counter]).then(() => {
+          setTimeout(next, 800)
+        })
+        counter = (counter + 1) % phrases.length
+      }
+      
+      next()</script>
+
+
 </body>
 
 </html>
