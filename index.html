@@ -10,41 +10,7 @@
     <link href="/img/logo.PNG" rel="apple-touch-icon">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/styles.css">
-    <style>
-        /* Add custom styles for the hero section */
-        .hero {
-            position: relative;
-            color: white;
-            text-align: center;
-            height: 50vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
 
-        .hero-content {
-            display: table;
-            width: 100%;
-        }
-
-        .table-cell {
-            display: table-cell;
-            vertical-align: middle;
-        }
-
-        .hero-title {
-            font-size: 2.5rem;
-            font-weight: bold;
-        }
-
-        .text {
-            font-size: 1.5rem;
-        }
-
-        .dud {
-            color: #888;
-        }
-    </style>
 </head>
 
 <body>
@@ -61,9 +27,12 @@
 
     <!-- Main Content Section -->
     <main class="container text-center my-5">
+        <h1>Welcome to Study-Sphere</h1>
+        <p>Your one-stop platform for all your educational needs. Explore courses, track your progress, and achieve your
+            learning goals with us.</p>
         <div class="text_container">
             <div class="text">Study-Sphere</div>
-          </div>
+        </div>
         <!-- Informative Section -->
         <section class="my-5">
             <h2>About Study-Sphere</h2>
@@ -168,91 +137,91 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script >
+    <script>
         class TextScramble {
-        constructor(el) {
-          this.el = el
-          this.chars = '!<>-_\\/[]{}—=+*^?#________'
-          this.update = this.update.bind(this)
-        }
-        setText(newText) {
-          const oldText = this.el.innerText
-          const length = Math.max(oldText.length, newText.length)
-          const promise = new Promise((resolve) => this.resolve = resolve)
-          this.queue = []
-          for (let i = 0; i < length; i++) {
-            const from = oldText[i] || ''
-            const to = newText[i] || ''
-            const start = Math.floor(Math.random() * 40)
-            const end = start + Math.floor(Math.random() * 40)
-            this.queue.push({ from, to, start, end })
-          }
-          cancelAnimationFrame(this.frameRequest)
-          this.frame = 0
-          this.update()
-          return promise
-        }
-        update() {
-          let output = ''
-          let complete = 0
-          for (let i = 0, n = this.queue.length; i < n; i++) {
-            let { from, to, start, end, char } = this.queue[i]
-            if (this.frame >= end) {
-              complete++
-              output += to
-            } else if (this.frame >= start) {
-              if (!char || Math.random() < 0.28) {
-                char = this.randomChar()
-                this.queue[i].char = char
-              }
-              output += `<span class="dud">${char}</span>`
-            } else {
-              output += from
+            constructor(el) {
+                this.el = el
+                this.chars = '!<>-_\\/[]{}—=+*^?#________'
+                this.update = this.update.bind(this)
             }
-          }
-          this.el.innerHTML = output
-          if (complete === this.queue.length) {
-            this.resolve()
-          } else {
-            this.frameRequest = requestAnimationFrame(this.update)
-            this.frame++
-          }
+            setText(newText) {
+                const oldText = this.el.innerText
+                const length = Math.max(oldText.length, newText.length)
+                const promise = new Promise((resolve) => this.resolve = resolve)
+                this.queue = []
+                for (let i = 0; i < length; i++) {
+                    const from = oldText[i] || ''
+                    const to = newText[i] || ''
+                    const start = Math.floor(Math.random() * 40)
+                    const end = start + Math.floor(Math.random() * 40)
+                    this.queue.push({ from, to, start, end })
+                }
+                cancelAnimationFrame(this.frameRequest)
+                this.frame = 0
+                this.update()
+                return promise
+            }
+            update() {
+                let output = ''
+                let complete = 0
+                for (let i = 0, n = this.queue.length; i < n; i++) {
+                    let { from, to, start, end, char } = this.queue[i]
+                    if (this.frame >= end) {
+                        complete++
+                        output += to
+                    } else if (this.frame >= start) {
+                        if (!char || Math.random() < 0.28) {
+                            char = this.randomChar()
+                            this.queue[i].char = char
+                        }
+                        output += `<span class="dud">${char}</span>`
+                    } else {
+                        output += from
+                    }
+                }
+                this.el.innerHTML = output
+                if (complete === this.queue.length) {
+                    this.resolve()
+                } else {
+                    this.frameRequest = requestAnimationFrame(this.update)
+                    this.frame++
+                }
+            }
+            randomChar() {
+                return this.chars[Math.floor(Math.random() * this.chars.length)]
+            }
         }
-        randomChar() {
-          return this.chars[Math.floor(Math.random() * this.chars.length)]
-        }
-      }
-      
-      // ——————————————————————————————————————————————————
-      // Example
-      // ——————————————————————————————————————————————————
-      
-      const phrases = [
-        'a lifelong learner,',
-'an innovator,',
-'a coding enthusiast,',
-'an academic explorer,',
-'a knowledge seeker,',
-'a future leader,',
-'a course creator,',
-'a skill builder,',
-'an education advocate,',
-'a learning visionary,'
 
-      ]
-      
-      const el = document.querySelector('.text')
-      const fx = new TextScramble(el)
-      
-      let counter = 0
-      const next = () => {
-        fx.setText(phrases[counter]).then(() => {
-          setTimeout(next, 800)
-        })
-        counter = (counter + 1) % phrases.length
-      }
-      
-      next()</script>
+        // ——————————————————————————————————————————————————
+        // Example
+        // ——————————————————————————————————————————————————
+
+        const phrases = [
+            'a lifelong learner,',
+            'an innovator,',
+            'a coding enthusiast,',
+            'an academic explorer,',
+            'a knowledge seeker,',
+            'a future leader,',
+            'a course creator,',
+            'a skill builder,',
+            'an education advocate,',
+            'a learning visionary,'
+
+        ]
+
+        const el = document.querySelector('.text')
+        const fx = new TextScramble(el)
+
+        let counter = 0
+        const next = () => {
+            fx.setText(phrases[counter]).then(() => {
+                setTimeout(next, 800)
+            })
+            counter = (counter + 1) % phrases.length
+        }
+
+        next()</script>
 
 
 </body>
