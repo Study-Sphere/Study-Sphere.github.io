@@ -1,17 +1,85 @@
-/* blog.css */
-
 body {
   font-family: "Lato", sans-serif;
   margin: 0; /* Remove default margin */
 }
 
+/* Light Theme */
+body.light-theme {
+  background-color: #F0F2F5; /* Light background */
+  color: #2D2747; /* Dark text */
+}
+
+/* Dark Theme */
+body.dark-theme {
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light text */
+}
+
+/* header section */
 header {
   position: fixed;
   width: 100%;
   z-index: 2;
   top: 0; /* Ensure the header is at the top */
+  background-color: #2D2747; /* Dark color */
+  color: #ffffff; /* White text */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: width 0.5s; /* Smooth transition for resizing */
+  box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
+header.light-theme {
+  background-color: #2D2747; /* Dark color */
+  color: #ffffff; /* White text */
+}
+
+header.dark-theme {
+  background-color: #003366; /* Darker blue */
+  color: #ffffff; /* White text */
+}
+
+header .btn-group {
+  display: flex;
+  gap: 5px; /* Add spacing between buttons */
+}
+
+/* Updated Button Styles */
+header .btn {
+  border-radius: 4px; /* Subtle rounded corners */
+  padding: 5px 10px; /* Adjust padding for a balanced look */
+  margin: 0 5px; /* Ensure proper spacing between buttons */
+}
+
+header .btn-primary, 
+header .btn-success {
+  background-color: #007bff; /* Primary color */
+  border: none;
+  color: #ffffff;
+  border-radius: 5px; /* Maintain subtle rounded corners */
+  padding: 5px 10px; /* Apply consistent padding */
+}
+
+header .btn-danger{
+  /* background-color: #007bff; Primary color */
+  border: none;
+  color: #ffffff;
+  border-radius: 4px; /* Maintain subtle rounded corners */
+  padding: 5px 10px; /* Apply consistent padding */
+
+}
+
+header .right-section {
+  display: flex;
+  align-items: center;
+  gap: 2px; 
+  /*Adds space between elements */
+}
+
+/* Sidebar */
 .sidebar {
   height: 100%;
   width: 250px;
@@ -19,24 +87,58 @@ header {
   z-index: 1;
   top: 60px; /* Adjusted to appear below the header */
   left: 0;
-  background-color: #111;
+  background-color: #1a1a2e; /* Updated for a slightly lighter and richer dark shade */
   overflow-x: hidden;
   overflow-y: auto; /* Added vertical scrollbar */
   transition: 0.5s;
   padding-top: 20px;
 }
 
+.sidebar.light-theme {
+  background-color: #111; /* Dark background */
+}
+
+.sidebar.light-theme a {
+  color: #818181; /* Light gray text */
+}
+
+.sidebar.light-theme a:hover {
+  color: #f1f1f1; /* Lighter text on hover */
+}
+
+.openbtn.light-theme {
+  background-color: #007bff; /* Primary button color */
+  color: #ffffff; /* White text */
+}
+
+body.dark-theme .sidebar {
+  background-color: #0d1b2a; /* Darker blue for consistency */
+}
+
+body.dark-theme .sidebar a {
+  color: #99cfff; /* Softer blue tone for readability */
+}
+
+body.dark-theme .sidebar a:hover {
+  color: #cce0ff; /* Slightly lighter hover for the dark theme */
+}
+
+.openbtn.dark-theme {
+  background-color: #0056e0; /* Darker blue button */
+  color: #ffffff; /* White text */
+}
+
 .sidebar a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 25px;
-  color: #818181;
+  font-size: 22px; /* Slightly reduced font size for better balance */
+  color: #b3b3b3; /* Softer gray for better contrast */
   display: block;
   transition: 0.3s;
 }
 
 .sidebar a:hover {
-  color: #f1f1f1;
+  color: #ffffff; /* Brighter hover effect */
 }
 
 .sidebar .closebtn {
@@ -45,6 +147,7 @@ header {
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+  color: #ffffff; /* Ensure the close button stands out */
 }
 
 .openbtn {
@@ -52,7 +155,7 @@ header {
   cursor: pointer;
   background-color: #111;
   color: white;
-  padding: 10px 15px;
+  padding: 5px 15px;
   border: none;
   display: none; /* Hide by default */
 }
@@ -61,7 +164,7 @@ header {
   transition: margin-left .5s;
   padding: 16px;
   margin-top: 60px; /* To ensure the content doesn't go under the header */
-  margin-left: 250px; /* Default margin for large screens */
+  margin-left: 0; /* Default margin for smaller screens */
 }
 
 .blog-content {
@@ -80,8 +183,14 @@ header {
   height: auto;
 }
 
-/* Responsive Sidebar */
+/* Responsive Sidebar and Header */
 @media screen and (max-width: 600px) {
+  header .btn-danger{
+    padding: 5px 7px;
+  }
+  header .btn-primary{
+    padding: 5px 7px;
+  }
   .sidebar {
     width: 0;
     height: 100%;
@@ -102,50 +211,77 @@ header {
   }
 
   .main-content {
-    margin-left: 0;
+    padding: 16px;
+    margin-top: 60px;
+  }
+  
+  body.dark-theme .main-content {
+    color: #e0e0e0;
   }
 
-  .sidebar .closebtn {
-    display: block; /* Show close button on small screens */
+  .header-content {
+    width: calc(100% - 60px); /* Adjust width for header content */
   }
 }
 
-/* Header Styling from styles.css */
-header {
-  background-color: #2D2747; /* Dark color */
-  color: #ffffff; /* White text */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* Buy Me a Coffee Link Styling */
+.buy-coffee-link {
+  /* background-color: #f7f7f7; */
+  padding: 20px;
+  border-radius: 10px;
+  /* max-width: 800px; */
+  margin: 20px auto;
 }
 
-header .logo {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%; /* Makes the logo round */
-  object-fit: cover; /* Ensures the image fits within the round shape */
+.buy-coffee-link h3 {
+  font-size: 24px;
+  color: #2D2747;
+  margin-bottom: 10px;
 }
 
-header .btn {
-  margin: 0 5px;
+.buy-coffee-link p {
+  font-size: 18px;
+  color: #555;
 }
 
-header .btn-primary {
-  background-color: #007bff; /* Bootstrap primary color */
-  border: none;
-  color: #ffffff; /* White text */
-  padding: 5px;
+.buy-coffee-link a {
+  color: #ff813f;
 }
 
-header .btn-primary a{
-  background-color: #007bff;
-  border: none;
+.buy-coffee-link a:hover {
+  text-decoration: underline;
 }
 
-header .btn-success {
-  background-color: #28a745; /* Bootstrap success color */
-  border: none;
-  color: #ffffff; /* White text */
+.buy-coffee-link.light-theme {
+  background-color: #f7f7f7; /* Light background */
+  color: #2D2747; /* Dark text */
+}
+
+.buy-coffee-link.light-theme a {
+  color: #ff813f; /* Warm color for links */
+}
+
+body.dark-theme .buy-coffee-link {
+  /* background-color: #003366; */
+  color: #e0e0e0;
+}
+
+body.dark-theme .buy-coffee-link h3 {
+  color: #e0e0e0; /* Adjusted text color for h3 */
+  border-radius: 10px;
+}
+
+body.dark-theme .buy-coffee-link p {
+  color: #e0e0e0; /* Adjusted text color for p */
+}
+
+body.dark-theme .buy-coffee-link a {
+  color: #80bfff;
+}
+
+@media (min-width: 600px) {
+  .buy-coffee-link {
+    margin-right: 20px; /* Adjust this value to control distance from the right */
+    margin-left: calc(50% - 400px); /* Center the div with a margin from the right */
+  }
 }

@@ -27,7 +27,7 @@ h3, h6 {
 
 p {
     color: #6C757D; /* Lighter grey for paragraph text */
-    font-size: 14px;
+    font-size: 15px;
     line-height: 21px;
 }
 
@@ -49,6 +49,13 @@ header .logo {
     object-fit: cover; /* Ensures the image fits within the round shape */
 }
 
+header .right-section {
+    display: flex;
+    align-items: center;
+    gap: 2px; 
+    /*Adds space between elements */
+}
+
 header .btn {
     margin: 0 5px;
 }
@@ -63,6 +70,28 @@ header .btn-success {
     background-color: #28a745; /* Bootstrap success color */
     border: none;
     color: #ffffff; /* White text */
+}
+
+header .btn-danger{
+    background-color: #dc3545; /* Bootstrap danger color */
+    border: none;
+    color: #ffffff;
+}
+
+header .theme-toggle-btn {
+    width: 50px;
+    height: 38px;
+    border-radius: 4px;
+    background-color: #2D2747; /* Gray */
+    color: #ffffff; /* White text */
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
 }
 
 /* Main Content Styling */
@@ -102,6 +131,13 @@ main {
   
   /* Small devices (portrait tablets and large phones, 600px and below) */
   @media (max-width: 600px) {
+    .btn .btn-primary .btn-success{
+        padding: 6px;
+    }
+    .logo{
+        padding: 10px;
+        display: none;
+    }
     .text {
       font-size: 22px;
     }
@@ -109,6 +145,9 @@ main {
   
   /* Medium devices (landscape tablets, 768px and below) */
   @media (max-width: 768px) {
+    .btn .btn-primary .btn-success{
+        padding: 11px;
+    }
     .text {
       font-size: 24px;
     }
@@ -117,7 +156,7 @@ main {
   /* Large devices (desktops, 992px and below) */
   @media (max-width: 992px) {
     .text {
-      font-size: 26px;
+      font-size: 25px;
     }
   }
   
@@ -281,4 +320,48 @@ footer a {
 footer a:hover {
     color: #0056b3; /* Darker shade of primary color */
     text-decoration: underline;
+}
+
+body.light-theme {
+    background-color: #F0F2F5;
+    color: #2D2747;
+}
+
+/* Dark Theme Styles */
+body.dark-theme {
+    background-color: #2c2c2c; /* Dark Gray */
+    color: #e0e0e0; /* Light Gray */
+}
+
+body.dark-theme h1, 
+body.dark-theme h2, 
+body.dark-theme h3, 
+body.dark-theme h6, 
+body.dark-theme p {
+    color: #b3e5fc; /* Light Blue */
+}
+
+body.dark-theme .text {
+    color: #90caf9; /* Soft Blue */
+}
+
+body.dark-theme .dud {
+    color: #90caf9; /* Soft Blue */
+}
+
+body.dark-theme .btn-primary {
+    background-color: #64b5f6; /* Sky Blue */
+    border: none;
+}
+
+body.dark-theme .btn-success {
+    background-color: #66bb6a; /* Bright Green */
+    border: none;
+}
+
+body.dark-theme .feature-card, 
+body.dark-theme .card-container, 
+body.dark-theme .skills {
+    background-color: #2c2c2c; /* Dark Gray */
+    color: #e0e0e0; /* Light Gray */
 }

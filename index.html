@@ -13,13 +13,14 @@
 
 </head>
 
-<body>
+<body class="">
     <!-- Header Section -->
     <header class="d-flex justify-content-between align-items-center p-3">
         <div>
-            <a href="index.html"><img class="logo rounded" src="img\logo.PNG"></a>
+            <a href="index.html"><img class="logo" src="img\logo.PNG"></a>
         </div>
-        <div>
+        <div class="right-section">
+            <button id="theme-toggle" class="theme-toggle-btn btn">☀️</button><!-- Theme Toggle Button -->
             <a href="/html/login.html" class="btn btn-primary mr-2">Login</a>
             <a href="/html/register.html" class="btn btn-success">Register</a>
         </div>
@@ -137,6 +138,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/js/script.js"></script>
     <script>
         class TextScramble {
             constructor(el) {

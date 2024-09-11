@@ -8,11 +8,15 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/home.css">
 </head>
-<body>
+<body class="">
     <nav class="navbar navbar-expand-lg navbar-dark bg-custom">
         <div class="container-fluid">
-            
+
             <span class="navbar-text" id="welcomeMessage">Welcome, <span id="userName">[User Name]</span></span>
+            <div class="right-section ml-3">
+                <!-- theme toggle button -->
+                <button id="theme-toggle" class="theme-toggle-btn btn">☀️</button>
+            </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -29,7 +33,7 @@
             </div>
         </div>
     </nav>
-
+    
     <!-- Logout Confirmation Modal -->
     <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -60,7 +64,7 @@
     <div class="category">
         <h3>Financial</h3>
         <div class="course-list">
-            <a href="Courses_content/CA.html" class="btn btn-course">Chartered Accountant</a>
+            <a href="blogs/ca/blog1.html" class="btn btn-course">Chartered Accountant</a>
             <a href="#" class="btn btn-course">Financial Risk Management</a>
             <a href="#" class="btn btn-course">Investment Banking</a>
             <a href="#" class="btn btn-course">Personal Finance Planning</a>
@@ -160,7 +164,7 @@
             <!-- Add more categories as needed -->
         </div>
     </div>
-    <script src=""></script>
+    <script src="/js/home.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

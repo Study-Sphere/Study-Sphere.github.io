@@ -1,6 +1,3 @@
-import Amplify from 'aws-amplify';
-import awsconfig from './aws-exports';
-Amplify.configure(awsconfig);
 document.addEventListener('DOMContentLoaded', () => {
     const loginForm = document.getElementById('loginForm');
     const registerForm = document.getElementById('registerForm');
@@ -50,5 +47,45 @@ function redirectTo(page) {
     window.location.href = page;
 }
 
-});
+const themeToggleButton = document.getElementById('theme-toggle');
 
+    function toggleTheme() {
+        const bodyElement = document.body;
+        bodyElement.classList.toggle('dark-theme');
+        bodyElement.classList.toggle('light-theme');
+
+        // const isDarkTheme = bodyElement.classList.contains('dark-theme');
+        const isDarkTheme = bodyElement.classList.contains('light-theme');
+      
+        // localStorage.setItem('theme', isDarkTheme ? 'dark-theme' : 'light-theme');
+        localStorage.setItem('theme', isDarkTheme);
+    }
+
+    themeToggleButton.addEventListener('click', toggleTheme);
+    themeToggleButton.addEventListener('click', updateThemeIcon);
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        document.body.classList.add(savedTheme);
+    } else {
+        document.body.classList.add('light-theme'); // Default to light theme
+    }
+
+    // Set the correct icon on load
+    updateThemeIcon();
+    function updateThemeIcon() {
+        const x = document.getElementById('theme-toggle');
+        const bodyElement = document.body; // Define bodyElement if not already defined
+        const savedTheme = bodyElement.classList.contains('dark-theme') ? 'dark-theme' : 'light-theme'; // Adjust savedTheme as needed
+    
+        if (bodyElement.classList.contains('dark-theme')) {
+            x.textContent = '🌙'; // Moon icon for dark theme
+        } else if (savedTheme === 'light-theme') {
+            x.textContent = '☀️'; // Sun icon for light theme
+        }
+    }
+
+
+    
+
+});

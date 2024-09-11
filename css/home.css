@@ -100,6 +100,29 @@ h2 {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
+.theme-toggle-btn {
+    width: 50px;
+    height: 38px;
+    border-radius: 4px; /* Modified to match the header design */
+    background-color: #2D2747; /* Gray */
+    color: #ffffff; /* White text */
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 20px; /* Ensures consistent icon size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    margin-left: 10px; /* Adds spacing between the button and adjacent elements */
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 2px; /* Adds space between the theme toggle button and other elements */
+}
+
 .btn-outline-custom {
     color: #28a745;
     border-color: #28a745;
@@ -117,5 +140,49 @@ h2 {
     }
 }
 
+/* Default (light theme) */
+body.light-theme {
+    background-color: #f7f9fc; /* Slightly off-white background */
+    color: #333333; /* Darker gray text */
+}
 
+/* Dark theme styles */
+body.dark-theme {
+    background-color: #2c2c2c; /* Dark Gray */
+    color: #e0e0e0; /* Light text */
+}
+
+/* Dark theme navbar */
+body.dark-theme .navbar-dark .navbar-brand,
+body.dark-theme .navbar-dark .navbar-text,
+body.dark-theme .navbar-dark .navbar-nav .nav-link {
+    color: #b3e5fc; /* Light Blue */
+}
+
+body.dark-theme h3,
+body.dark-theme .mt-4{
+    color: #b3e5fc;
+}
+
+body.dark-theme .bg-custom {
+    background-color: #1c1c1c; /* Darker Gray for navbar */
+}
+
+/* Dark theme for other elements */
+body.dark-theme .category {
+    background-color: #333333; /* Slightly lighter dark background */
+    border: 1px solid #444444; /* Darker border */
+}
+
+/* Dark theme button styles */
+body.dark-theme .btn-course {
+    background-color: #0044cc; /* Dark Blue for button color */
+    color: #ffffff; /* White text for buttons */
+    border: 1px solid #0033a0; /* Slightly darker blue border */
+}
+
+body.dark-theme .btn-course:hover {
+    background-color: #0056e0; /* Lighter blue for hover effect */
+    color: #ffffff; /* White text on hover */
+}
 
