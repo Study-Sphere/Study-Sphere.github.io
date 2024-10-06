@@ -4,7 +4,7 @@ body {
     background-color: #f8f9fa; /* Light gray background */
     color: #343a40; /* Dark gray text */
     margin: 0;
-    padding: 0;
+    padding: 40px;
     box-sizing: border-box;
 }
 
@@ -60,8 +60,18 @@ h2 {
 
 
 /* navbar section */
+/* Navbar Customization */
 .bg-custom {
     background-color: #2D2747;
+}
+
+.navbar-dark {
+    position: fixed; /* Fixes the navbar at the top */
+    top: 0; /* Position it at the top of the page */
+    left: 0; /* Align it to the left */
+    width: 100%; /* Make the navbar take up the full width of the page */
+    z-index: 1000; /* Ensure the navbar is above other content */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow for depth */
 }
 
 .navbar-dark .navbar-brand {
@@ -164,10 +174,6 @@ body.dark-theme .mt-4{
     color: #b3e5fc;
 }
 
-body.dark-theme .bg-custom {
-    background-color: #1c1c1c; /* Darker Gray for navbar */
-}
-
 /* Dark theme for other elements */
 body.dark-theme .category {
     background-color: #333333; /* Slightly lighter dark background */
@@ -186,3 +192,23 @@ body.dark-theme .btn-course:hover {
     color: #ffffff; /* White text on hover */
 }
 
+body.dark-theme .modal{
+    color:#007bff;
+    /* background-color: #1c1c1c; */
+}
+
+body.dark-theme .modal-header {
+    background-color: #1c1c1c;
+}
+
+body.dark-theme .modal-body {
+    background-color: #1c1c1c;
+}
+
+body.dark-theme .modal-footer{
+    background-color: #1c1c1c;
+}
+
+body.dark-theme .close span{
+    color: #007bff;
+}

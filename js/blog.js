@@ -1,3 +1,7 @@
+document.getElementById("confirmLogoutBtn").addEventListener("click", function() {
+  // Add your logout logic here
+  window.location.href = "logout-url.html";
+});
 function openNav() {
   document.getElementById("sidebar").style.width = "250px";
   document.getElementById("main-content").style.marginLeft = "250px";

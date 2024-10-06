@@ -33,6 +33,14 @@ p {
 
 /* Header Styling */
 header {
+    position: fixed; 
+    /* Makes the header fixed on the page */
+    top: 0; 
+    /* Position it at the top of the page */
+    left: 0; 
+    /* Align it to the left */
+    width: 100%; 
+    /* Make the header take up the full width of the page */
     background-color: #2D2747; /* Dark color */
     color: #ffffff; /* White text */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
@@ -40,11 +48,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 1000; 
+    /* Ensure the header is above other content */
 }
 
 header .logo {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%; /* Makes the logo round */
     object-fit: cover; /* Ensures the image fits within the round shape */
 }
@@ -96,7 +106,7 @@ header .theme-toggle-btn {
 
 /* Main Content Styling */
 main {
-    padding: 20px;
+    padding: 70px;
     text-align: center;
 }
 
@@ -364,4 +374,8 @@ body.dark-theme .card-container,
 body.dark-theme .skills {
     background-color: #2c2c2c; /* Dark Gray */
     color: #e0e0e0; /* Light Gray */
+}
+
+body.dark-theme .feature-card h5 {
+    color: #8ecbf9; /* Soft Blue */
 }

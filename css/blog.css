@@ -49,34 +49,38 @@ header .btn-group {
 
 /* Updated Button Styles */
 header .btn {
-  border-radius: 4px; /* Subtle rounded corners */
+  /* border-radius: 4px; Subtle rounded corners */
   padding: 5px 10px; /* Adjust padding for a balanced look */
   margin: 0 5px; /* Ensure proper spacing between buttons */
 }
 
-header .btn-primary, 
-header .btn-success {
+header .btn-primary {
+  /* border-top-left-radius: 2;
+  border-top-right-radius: 2;
+  border-bottom-left-radius: 2;
+  border-bottom-right-radius: 2; */
   background-color: #007bff; /* Primary color */
-  border: none;
   color: #ffffff;
-  border-radius: 5px; /* Maintain subtle rounded corners */
+  /* border-radius: 5px; Rounded corners */
   padding: 5px 10px; /* Apply consistent padding */
 }
 
-header .btn-danger{
-  /* background-color: #007bff; Primary color */
-  border: none;
+header .btn-danger {
+  /* border-top-left-radius: 2;
+  border-top-right-radius: 2;
+  border-bottom-left-radius: 2;
+  border-bottom-right-radius: 2; */
+  background-color: #dc3545; /* Danger color */
   color: #ffffff;
-  border-radius: 4px; /* Maintain subtle rounded corners */
+  border-radius: 0px; 
+  /*Rounded corners */
   padding: 5px 10px; /* Apply consistent padding */
-
 }
 
 header .right-section {
   display: flex;
   align-items: center;
-  gap: 2px; 
-  /*Adds space between elements */
+  gap: 10px; /* Adds more space between elements */
 }
 
 /* Sidebar */
@@ -85,7 +89,7 @@ header .right-section {
   width: 250px;
   position: fixed;
   z-index: 1;
-  top: 60px; /* Adjusted to appear below the header */
+  top: 50px; /* Adjusted to appear below the header */
   left: 0;
   background-color: #1a1a2e; /* Updated for a slightly lighter and richer dark shade */
   overflow-x: hidden;
@@ -194,7 +198,7 @@ body.dark-theme .sidebar a:hover {
   .sidebar {
     width: 0;
     height: 100%;
-    top: 60px; /* Ensure the sidebar appears below the header on small screens */
+    top: 50px; /* Ensure the sidebar appears below the header on small screens */
     padding-top: 20px;
   }
 
@@ -205,7 +209,7 @@ body.dark-theme .sidebar a:hover {
   .openbtn {
     display: block;
     position: fixed;
-    top: 10px;
+    top: 5px;
     left: 10px;
     z-index: 3;
   }
@@ -225,63 +229,142 @@ body.dark-theme .sidebar a:hover {
 }
 
 /* Buy Me a Coffee Link Styling */
-.buy-coffee-link {
-  /* background-color: #f7f7f7; */
+/* .buy-coffee-link {
   padding: 20px;
   border-radius: 10px;
-  /* max-width: 800px; */
   margin: 20px auto;
-}
+  text-align: right;
+} */
 
-.buy-coffee-link h3 {
-  font-size: 24px;
-  color: #2D2747;
-  margin-bottom: 10px;
+/* body.light-theme .buy-coffee-link {
+  background-color: transparent; Light background
+  color: #2D2747; Dark text
 }
+body.light-theme .buy-coffee-link a {
+  color: #ff813f; Warm color for links */
 
-.buy-coffee-link p {
-  font-size: 18px;
-  color: #555;
-}
+/* } */
 
-.buy-coffee-link a {
-  color: #ff813f;
-}
-
-.buy-coffee-link a:hover {
-  text-decoration: underline;
-}
-
-.buy-coffee-link.light-theme {
-  background-color: #f7f7f7; /* Light background */
-  color: #2D2747; /* Dark text */
-}
-
-.buy-coffee-link.light-theme a {
-  color: #ff813f; /* Warm color for links */
-}
-
-body.dark-theme .buy-coffee-link {
-  /* background-color: #003366; */
+/* body.dark-theme .buy-coffee-link {
+  background-color: #003366;
   color: #e0e0e0;
-}
+} */
 
-body.dark-theme .buy-coffee-link h3 {
-  color: #e0e0e0; /* Adjusted text color for h3 */
-  border-radius: 10px;
-}
+/* body.dark-theme .buy-coffee-link h3 { */
+  /* color: #e0e0e0; Adjusted text color for h3 */
+  /* border-radius: 10px; */
+/* } */
 
-body.dark-theme .buy-coffee-link p {
-  color: #e0e0e0; /* Adjusted text color for p */
-}
+/* body.dark-theme .buy-coffee-link p { */
+  /* color: #e0e0e0; Adjusted text color for p */
+/* } */
 
-body.dark-theme .buy-coffee-link a {
+/* body.dark-theme .buy-coffee-link a {
   color: #80bfff;
+} */
+
+/* @media (min-width: 600px) {
+  .buy-coffee-link { */
+    /* margin-left: calc(50% - 400px); Center the div with a margin from the right */
+    /* margin-right: 20px; Adjust this value to control distance from the right */
+  /* }
+} */
+
+/* @media (max-width: 768px) {
+  .buy-coffee-link {
+    display: flex; /* Use flexbox for layout *
+    flex-direction: column; /* Stack items vertically *
+    align-items: center; /* Center items horizontally *
+    width: 100%; /* Full width *
+    padding: 20px; /* Add padding *
+    box-sizing: border-box; /* Include padding in width *
+    text-align: right; /* Right align text 
+    margin: 0; /* Remove additional margins 
+  }
+  .buy-coffee-link h3, 
+  .buy-coffee-link p {
+    width: 100%; /* Make text elements full width 
+    margin: 0; /* Remove margins from text elements 
+  }
+} */
+
+/* Feedback Section Styling */
+/* .feedback-section {
+  padding: 15px;
+  border-radius: 10px;
+  margin: 20px auto;
+  background-color: #f7f7f7; /* Light theme background *
+  color: #2D2747; /* Dark text *
+  text-align: center; *
+}*/
+
+/* .feedback-section h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
 }
 
-@media (min-width: 600px) {
-  .buy-coffee-link {
-    margin-right: 20px; /* Adjust this value to control distance from the right */
-    margin-left: calc(50% - 400px); /* Center the div with a margin from the right */
+.feedback-section textarea {
+  width: 100%;
+  resize: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.feedback-section .submit-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+} */
+
+/* .feedback-section.light-theme {
+  background-color: #f7f7f7; Light theme
+  color: #2D2747; */
+/* }
+
+body.dark-theme .feedback-section { */
+  /* background-color: #003366; Dark theme background */
+  /* color: #e0e0e0; Adjusted text color */
+/* } */
+
+/* body.dark-theme .feedback-section h3 {
+  color: #e0e0e0;
+} */
+
+/* Responsive Feedback Section */
+/* @media (min-width: 600px) {
+  .feedback-section {
+    margin-left: calc(50% - 400px); Center the div with a margin from the right
+    margin-right: 20px;
   }
+} */
+
+/* @media (max-width: 768px) {
+  .feedback-section {
+    margin-left: 10px;
+    margin-right: 10px; Ensure proper margin for smaller screens
+  }
+} */
+
+body.dark-theme .modal{
+  color:#007bff;
+  /* background-color: #1c1c1c; */
+}
+
+body.dark-theme .modal-header {
+  background-color: #1c1c1c;
+}
+
+body.dark-theme .modal-body {
+  background-color: #1c1c1c;
+}
+
+body.dark-theme .modal-footer{
+  background-color: #1c1c1c;
+}
+
+body.dark-theme .close span{
+  color: #007bff;
 }
